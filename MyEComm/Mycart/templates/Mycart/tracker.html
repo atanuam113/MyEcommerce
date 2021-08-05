@@ -1,0 +1,72 @@
+{% extends 'Mycart/basic.html' %}
+
+{% block title %}Order Tracker{% endblock %}
+
+{% block body%}
+
+<div class="container my-2">
+    <div class="col">
+        <h4>Track your items by your order id</h4>
+        <div my-4>
+
+            <ul class="list-group" id="items">
+                <form class="row g-3" method="POST" action="#" id="Tracker_form">{% csrf_token %}
+                    <div class="col-md-12">
+                        <label for="name" class="form-label">Order Id</label>
+                        <input type="text" placeholder="Enter your Order Id" class="form-control" id="orderid" name="orderid">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+                    </div>
+                    <div class="col-12 my-2">
+                        <span class="pyo">
+                            <button type="submit" class="btn btn-primary">Track your order</button>
+                        </span>
+                    </div>
+        
+                    <!-- </fieldset> -->
+                
+        
+            </ul>
+        </div>
+    </div>
+    <div class="col">
+        <h4>Your Order status</h4>
+        <div my-4>
+
+            <ul class="list-group" id="items">
+            </ul>
+        </div>
+    </div>
+</div>
+{%endblock%}
+
+{% block js %}
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<script>
+$('#Tracker_form').submit(function(event){
+
+    $('#items').empty();
+    var formData = {
+        'order_id' : $('input[name=orderid]').val(),
+        'email': $('input[name=email]').val(),
+        'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+    }
+
+    // $.ajax({
+    //     type: 'POST',
+    //     url: '/Mycart/tracker/',
+    //     data: formData,
+    //     encode: true
+    // })
+
+    // .done(function(data){
+    //     console.log(data)
+    // })
+    // event.preventDefault();
+
+})
+
+</script>
+{% endblock %}

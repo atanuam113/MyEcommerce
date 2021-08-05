@@ -1,0 +1,75 @@
+
+.col-md-3
+{
+display: inline-block;
+margin-left:-4px;
+}
+
+.carousel-indicators .active {
+background-color: blue;
+}
+.col-md-3 img{
+
+width: 150px;
+height: 165px;
+}
+.d-block
+{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background-color:#fff;
+}
+
+body .carousel-indicator li{
+background-color: blue;
+}
+
+body .carousel-indicators{
+bottom: 0;
+}
+
+.card
+{
+border: 0px;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: blue;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+top: 250px;
+padding-top:100px;
+bottom: auto;
+}
+body .no-padding{
+padding-left: 0;
+padding-right: 0;
+padding-bottom: 22px;
+}
+.categoryspace
+{
+  padding-top: 10px;
+}
+.carousel-control-next {
+    right: -66px;
+}
+.carousel-control-prev {
+    left: -70px;
+}
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
+.p-5 {
+    padding: 1rem!important;
+    padding-left: 14px !important;
+    margin-left:40px;
+    margin-right:-10px;
+
+}
