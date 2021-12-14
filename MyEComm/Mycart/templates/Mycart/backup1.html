@@ -1,6 +1,56 @@
 {% extends 'Mycart/basic.html' %}
 {% load static %}
+{% block css %}
+.col-md-3
+{
+display: inline-block;
+margin-left:-4px;
+}
 
+.carousel-indicators .active {
+background-color: blue;
+}
+.col-md-3 img{
+
+width: 150px;
+height: 165px;
+}
+
+body .carousel-indicator li{
+background-color: blue;
+}
+
+body .carousel-indicators{
+bottom: 0;
+}
+
+.card
+{
+border: 0px;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: blue;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+top: auto;
+padding-top:100px;
+bottom: auto;
+}
+body .no-padding{
+padding-left: 0,
+padding-right: 0;
+padding-bottom: 22px;
+}
+.categoryspace
+{
+  padding-top: 30px;
+}
+
+{% endblock %}
 {% block homelink %} 
 
     <link rel="stylesheet" href="{% static 'Mycart/assets/css/fontawesome.min.css'%}">
@@ -171,11 +221,6 @@
             <h2 class="h5 text-center mt-3 mb-3">Sports & Fitness</h2>
             <p class="text-center"><a class="btn btn-success" href="/Mycart/CategoryItem/{{10}}">Go Shop</a></p>
         </div>
-        <!-- <div class="col-12 col-md-3 p-5 mt-3">
-            <a href="/Mycart/CategoryItem/{{8}}"><img src="{% static 'Mycart/assets/img/categoryimg_8.jpg' %}" class="rounded-circle img-fluid border"></a>
-            <h2 class="h5 text-center mt-3 mb-3">Jewellery</h2>
-            <p class="text-center"><a class="btn btn-success" href="/Mycart/CategoryItem/{{8}}">Go Shop</a></p>
-        </div> -->
         <div class="col-12 col-md-3 p-5 mt-3">
             <a href="/Mycart/CategoryItem/{{12}}"><img src="{% static 'Mycart/assets/img/categoryimg_12.jpg' %}" class="rounded-circle img-fluid border"></a>
             <h2 class="h5 text-center mt-3 mb-3">Beauty & Luxury</h2>
@@ -218,21 +263,23 @@
 
 <!-- Start Featured Product -->
 <section class="bg-light">
-    <div class="container py-5">
+    <div class="container my-3">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
-                <h4>Recommended products inspired by your browsing history</h4>
+                <h1 class="h1">Featured Product</h1>
                 <p>
                     Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     Excepteur sint occaecat cupidatat non proident.
                 </p>
             </div>
         </div>
+        {% for product ,range in allProds %}
         <div class="row">
+            {% for i in product %}
             <div class="col-12 col-md-4 mb-4">
-                <div class="card h-100">
+                <div class="card">
                     <a href="shop-single.html">
-                        <img src="{% static 'Mycart/assets/img/feature_prod_01.jpg' %}" class="card-img-top" alt="...">
+                        <img src="/media/{{i.image}}" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between">
@@ -243,20 +290,21 @@
                                 <i class="text-muted fa fa-star"></i>
                                 <i class="text-muted fa fa-star"></i>
                             </li>
-                            <li class="text-muted text-right">$240.00</li>
+                            <li class="text-muted text-right"><b>Price:</b> &#x20b9;{{i.price}}</li>
                         </ul>
-                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{i.product_name}}</a>
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                            {{i.desc|slice:"0:53"}}...
                         </p>
                         <p class="text-muted">Reviews (24)</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4">
+            {% endfor %}
+            <!-- <div class="col-12 col-md-4 mb-4">
                 <div class="card h-100">
                     <a href="shop-single.html">
-                        <img src="{% static 'Mycart/assets/img/feature_prod_02.jpg' %}" class="card-img-top" alt="...">
+                        <img src="./assets/img/feature_prod_02.jpg" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between">
@@ -280,7 +328,7 @@
             <div class="col-12 col-md-4 mb-4">
                 <div class="card h-100">
                     <a href="shop-single.html">
-                        <img src="{% static 'Mycart/assets/img/feature_prod_03.jpg' %}" class="card-img-top" alt="...">
+                        <img src="./assets/img/feature_prod_03.jpg" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between">
@@ -300,58 +348,82 @@
                         <p class="text-muted">Reviews (74)</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
+        {% endfor %}
     </div>
 </section>
+<!-- <section class="bg-light">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h4>Inspired by your browsing history</h4>
+                <p>
+                    Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident.
+                </p>
+            </div>
+        </div>
+        {% for product ,range in allProds %}
+        <div class="row">
+            {% for i in product %}
+            <div class="column">
+           <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100 align-items-center">
+                    <a href="shop-single.html">
+                        <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                            <li class="text-muted text-right"><b>Price:</b> &#x20b9;{{i.price}}</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{i.product_name}}</a>
+                        <p class="card-text">
+                            {{i.desc|slice:"0:53"}}...
+                        </p>
+                        <p class="text-muted">Reviews (24)</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="card align-items-center" style="width: 18rem;">
+                    <img src='/media/{{i.image}}' class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                            <li class="text-muted text-right"><b>Price:</b> &#x20b9;{{i.price}}</li>
+                        </ul>
+                        <h5 class="card-title">{{i.product_name}}</h5>
+                        <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
+                        <p class="text-muted">Reviews (24)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</section> -->
+
 <!-- End Featured Product -->
-
-
-
-
-
-
-
-
 {% endblock %}
 {% block js %}
-
-<script>
-    // var item = document.getElementById("watches").id;
-    // console.log(item)
-        
-
-
-
-// $('.watches').click(function(){
-        //     // var idstr = this.id.toString();
-        //     // console.log(idstr)
-        //     console.log("Inside")
-        // })
-
-
-
-
-    // function categoryitem()
-    // {
-    //     console.log("we are inside")
-    //     // var catitem1 = this.id.toString();
-    //     // console.log(catitem1)
-    // }
-    // var queryString = "?para1=" + catitem1;
-    // window.location.href ="CategoryItem.html" + queryString;
-    
-
-</script>
-
-
-
-
-
-
-
-
-
+<script src="{% static 'Mycart/assets/js/cartupdate.js' %}"></script>
 
 <!-- <script>
 // Find out the cart items from localStorage

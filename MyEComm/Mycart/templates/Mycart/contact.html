@@ -1,115 +1,19 @@
 {% extends 'Mycart/basic.html' %}
-
+{% load static %}
 {% block contactuslink %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-{% endblock %} -->
-{% block title %} Contact {% endblock %}
-
-{% block css %}
-/* Contact */
-
-#contact {
-  color: white;
-  background-color: #001828;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 980px;
-  position: relative;
-  padding-bottom: 50px;
-  <!-- padding-top: 100px; -->
-}
-
-.contact-item {
-  margin-left: 20px;
-  margin-bottom: 50px;
-}
-
-.item-link {
-    display: flex;
-    align-items: center;
-  }
-  
-  .item-link i,
-  .item-link span {
-    color: white;
-    transition: all 0.3s ease;
-  }
-  
-  .item-link:hover i,
-  .item-link:hover span {
-    color: #3496d8;
-  }
-  
-  .tm-input {
-    margin: 0 0 12px 0;
-    width: 90%;
-    padding: 4px 20px;
-    border-radius: 4px;
-    border: 1px solid white;
-    background: transparent;
-    color: white;
-  }
-  
-<!-- submit button -->
-.tm-btn-submit {
-	font-size: 0.9em;
-	color: white;
-	background-color: #369;
-	width: 50%;
-	margin-bottom: 60px;
-}
-
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #f7e9ec;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid #9c494900;
-  padding: -1.625rem .75rem;
-  font-size: 1rem;
-  border-radius: 1.25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.tm-btn-submit:hover {
-	color: #fff;
-	background-color: #38B;
-}
-.tm-btn-submit {
-    margin-left: 0;
-    margin-top: 2px;
-  }
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <link rel="stylesheet" href="{% static 'Mycart/assets/css/contactCSS.css'%}">
 {% endblock %}
+{% block title %} Contact {% endblock %}
 
 {% block body%} 
 {% load static %}
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
     
-    <div class="container tm-container-contact">
-      
-      <!-- <div class="row">
-        <div class="col-md-12">
-            <div class="heading-section">
-                <h2>Feel free to send a message</h2>
-                <img src="{% static 'Mycart/assets/img/under-heading.png' %}" alt="" >
-            </div>
-        </div>
-      </div> -->
-          
+    <div class="container tm-container-contact"> 
           <div class="text-center mb-2">
               <h2 class="tm-section-title">Contact Us</h2>
-              <!-- <p class="mb-2">
-                Hey, Welcome to Mycart online shopping site,let me know about your questions
-              </p><br> -->
               <img src="{% static 'Mycart/assets/img/under-heading.png' %}" alt="" ><br>
           </div>
 
@@ -161,16 +65,11 @@
           
       </div><!-- row ending -->
       
-    </div>
-
-        <!-- <footer class="text-center small tm-footer">
-        <p class="mb-0">
-        Copyright &copy; 2021 Mycart.com 
-        
-        <a rel="nofollow" href="" title="HTML templates">Designed by ATANU</a></p>
-      </footer> -->
-      
-
+    </div>     
   </section>
   
 {%endblock%}
+{% block js %} 
+<script src="{% static 'Mycart/assets/js/cartupdate.js' %}"></script>
+
+{% endblock %}

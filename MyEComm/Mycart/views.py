@@ -7,13 +7,21 @@ import json
 # Create your views here.
 def index(request):
     allProds = []
-    catprods = Mycart.objects.values('category', 'id')
-    cats = {item['category'] for item in catprods}
-    for cat in cats:
-        prod = Mycart.objects.filter(category=cat)
+    # catprods = Mycart.objects.values('category', 'id')
+    # fprod = Mycart.objects.values('id')
+    # print(len(fprod))
+    # for i in range(1,4):
+    # f_prod = Mycart.objects.values(id)
+    #     print(f_prod)
+    # f_prod = []
+    # all_fprod = {f_prod[Mycart.objects.filter(id=i)] for i in range(1,4)}
+    # print(all_fprod)
+    # cats = {item['category'] for item in catprods}
+    for cat in range(1,4):
+        prod = Mycart.objects.filter(id=cat)
         n = len(prod)
-        nSlides = n // 4 + ceil((n / 4) - (n // 4))
-        allProds.append([prod, range(1, nSlides), nSlides])
+        # nSlides = n // 4 + ceil((n / 4) - (n // 4))
+        allProds.append([prod, range(1, 4)])
         params = {'allProds':allProds}
     return render(request, 'Mycart/backup1.html', params)
 
@@ -71,11 +79,17 @@ def search(request):
     return render(request,'Mycart/search.html')
     
 def productview(request,myid):
+    prodlist = []
     # Featch the product using id
     product = Mycart.objects.filter(id=myid)
-    # print(product)
-    # print(product.product_name)
-    return render(request,'Mycart/productview.html',{'product': product[0]})
+    prodcat = Mycart.objects.filter(id=myid).values('category')
+    item = product[0]
+    cat = prodcat[0]['category']
+    prodlist.append([item,cat])
+    prodview = {'prodview': prodlist}
+    # print(prodlist[0])
+
+    return render(request,'Mycart/productview1.html',{'product': item})
     
 def checkout(request):
     if request.method =="POST":

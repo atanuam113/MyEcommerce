@@ -3,10 +3,7 @@
 {% block title %} About Us {% endblock %}
 {% block homelink %} 
 {% load static %}
-    <!-- <link rel="apple-touch-icon" href="{% static 'Mycart/assets/img/apple-icon.png' %}">
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'Mycart/assets/img/favicon.ico' %}"> -->
     <!-- does holds the brands color and hold navbar size -->
-    <link rel="stylesheet" href="{% static 'Mycart/assets/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'Mycart/assets/css/templatemo_style.css' %}">
     <link rel="stylesheet" href="{% static 'Mycart/assets/css/templatemo_misc.css' %}">
     <link rel="stylesheet" href="{% static 'Mycart/assets/css/flexslider.css' %}">
@@ -14,18 +11,6 @@
     <script src="{% static 'Mycart/assets/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js' %}"></script>
 {% endblock %}
 {% block body%}
-<!-- <div class="page-heading about-heading header-text">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="text-content">
-            <h4>about us</h4>
-            <h2>our company</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
 <!-- start Banner -->
 <section class="bg-success py-5">
@@ -33,11 +18,11 @@
         <div class="row align-items-center py-5">
             <div class="col-md-8 text-white">
                 <h1>About Us</h1> <br>
-                <h4>
+                <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </h4>
+                </p>
             </div>
             <div class="col-md-4">
                 <img src="{% static 'Mycart/assets/img/about-hero.svg' %}" alt="About Hero">
@@ -49,11 +34,9 @@
 
 <div class="text-center mb-2">
     <h2 class="tm-section-title">About Us</h2>
-    <!-- <p class="mb-2">
-      Hey, Welcome to Mycart online shopping site,let me know about your questions
-    </p><br> -->
     <img src="{% static 'Mycart/assets/img/under-heading.png' %}" alt="" ><br>
 </div>
+<!-- Start OurBackground Section -->
 <div class="best-features about-features">
     <div class="container">
       <div class="row">
@@ -71,12 +54,6 @@
           <div class="left-content">
             <h4>Who we are &amp; What we do?</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
-            <!-- <ul class="social-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-            </ul> -->
             <ul class="list-inline text-left footer-icons">
                 <li class="list-inline-item border border-light rounded-circle text-center">
                     <a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
@@ -96,11 +73,7 @@
       </div>
     </div>
   </div>
-  <div class="col-auto me-auto">
-    
-</div>
-
-
+ <!-- End OurBackground Section -->
 
   <!-- Start services Section -->
   <section class="container py-5">
@@ -145,212 +118,98 @@
 </section>
 <!-- End services Section -->
 
-<!-- <div id="our-team">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading-section">
-                    <h2></h2>
-                    
-                </div>
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Team</h1>
-                    <p>
-                        <img src="{% static 'Mycart/assets/img/under-heading.png' %}" alt="" > 
-                    </p>
-                </div>
-            </div> 
-            <div class="text-center mb-2">
-                <h2 class="tm-section-title">Our Team Member</h2>
-                <p class="mb-2">
-                  Hey, Welcome to Mycart online shopping site,let me know about your questions
-                </p><br> 
-                "{% static 'Mycart/assets/img/under-heading.png' %}" alt="" ><br>
+<!-- Start ourteam section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Our Team</h2>
+                <img src="{% static 'Mycart/assets/img/under-heading.png' %}" alt="" >
             </div>
         </div>
-        <div class="row">
-            <div class="authors">
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="" alt="Tracy - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="author-details">
-                         <h2>Tracy</h2>
-                         <span>Designer</span>
-                     </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="team-thumb">
+                <div class="author">
+                    <img src="{% static 'Mycart/assets/img/profilepic.jpg' %}" alt="Atanu - templatemo">
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="" alt="Mary - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
+                <div class="overlay">
+                    <div class="author-caption">
+                        <ul>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
+                        </ul>
                      </div>
-                     <div class="author-details">
-                         <h2>Mary</h2>
-                         <span>Developer</span>
-                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="" alt="Julia - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="author-details">
-                         <h2>Julia</h2>
-                         <span>Director</span>
-                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="" alt="Linda - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="author-details">
-                         <h2>Linda</h2>
-                         <span>Manager</span>
-                     </div>
-                </div>
-            </div>
+                 </div>
+             </div>
+             <div class="author-details">
+                 <h2>Atanu</h2>
+                 <span>Designer</span>
+             </div>
         </div>
-    </div>
-</div> -->
-<div id="our-team">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading-section">
-                    <h2>Our Team</h2>
-                    <img src="{% static 'Mycart/assets/img/under-heading.png' %}" alt="" >
+        <div class="col-md-3 col-sm-6">
+            <div class="team-thumb">
+                <div class="author">
+                    <img src="{% static 'Mycart/assets/img/writer1.jpg' %}" alt="Mary - templatemo">
                 </div>
-            </div>
+                <div class="overlay">
+                    <div class="author-caption">
+                        <ul>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
+                        </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="author-details">
+                 <h2>Mary</h2>
+                 <span>Developer</span>
+             </div>
         </div>
-        <div class="row">
-            <div class="authors">
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="{% static 'Mycart/assets/img/writer1.jpg' %}" alt="Tracy - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="author-details">
-                         <h2>Tracy</h2>
-                         <span>Designer</span>
-                     </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="team-thumb">
+                <div class="author">
+                    <img src="{% static 'Mycart/assets/img/writer1.jpg' %}" alt="Julia - templatemo">
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="{% static 'Mycart/assets/img/writer1.jpg' %}" alt="Mary - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
+                <div class="overlay">
+                    <div class="author-caption">
+                        <ul>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
+                        </ul>
                      </div>
-                     <div class="author-details">
-                         <h2>Mary</h2>
-                         <span>Developer</span>
-                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="{% static 'Mycart/assets/img/writer1.jpg' %}" alt="Julia - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="author-details">
-                         <h2>Julia</h2>
-                         <span>Director</span>
-                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="team-thumb">
-                        <div class="author">
-                            <img src="{% static 'Mycart/assets/img/writer1.jpg' %}" alt="Linda - templatemo">
-                        </div>
-                        <div class="overlay">
-                            <div class="author-caption">
-                                <ul>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
-                                    <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
-                                </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="author-details">
-                         <h2>Linda</h2>
-                         <span>Manager</span>
-                     </div>
-                </div>
-            </div>
+                 </div>
+             </div>
+             <div class="author-details">
+                 <h2>Julia</h2>
+                 <span>Director</span>
+             </div>
         </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="team-thumb">
+                <div class="author">
+                    <img src="{% static 'Mycart/assets/img/writer1.jpg' %}" alt="Linda - templatemo">
+                </div>
+                <div class="overlay">
+                    <div class="author-caption">
+                        <ul>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.facebook.com/atanu.mondal.90281943"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href=""><i class="fab fa-twitter fa-lg fa-fw"></i></a></li>
+                            <li><a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/atanu-mondal-012551208"><i class="fab fa-linkedin fa-lg fa-fw"></i></a></li>
+                        </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="author-details">
+                 <h2>Linda</h2>
+                 <span>Manager</span>
+             </div>
+        </div> 
     </div>
 </div>
-
+<!-- End ourteam section -->
 <!-- Start testimonails -->
 <!-- <div id="testimonails">
     <div class="container">
@@ -389,49 +248,11 @@
             </div>
         </div>
     </div>
-</div> -->
-<div id="testimonails">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="heading-section">
-                    <h2>Testimonials and Awards</h2>
-                    <img src="{% static 'Mycart/assets/img/under-heading.png' %}" alt="" >
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="testimonails-slider">
-                  <ul class="slides">
-                    <li>
-                        <div class="testimonails-content">
-                            <p>Nam nec risus feugiat dui ultrices dignissim. Morbi ex purus, commodo a tristique eu, mollis a nisi. Pellentesque in enim sit amet tellus ornare fringilla eget eu arcu. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
-                            <h6>Jennifer - <a href="#">Chief Designer</a></h6>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="testimonails-content">
-                            <p>Fusce fermentum libero fringilla odio pharetra malesuada. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam ultrices lectus quis consequat fringilla. Mauris non ex et purus sollicitudin.</p>
-                            <h6>Laureen - <a href="#">Marketing Executive</a></h6>
-                        </div> 
-                    </li>
-                    <li>
-                        <div class="testimonails-content">
-                            <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
-                            <h6>Tanya - <a href="#">Creative Director</a></h6>
-                        </div>
-                    </li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</div>  -->
 <!-- End testimonails -->
 
 <!-- Start Brands -->
-<section class="bg-light py-5">
+<!-- <section class="bg-light">
     <div class="container my-4">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
@@ -442,26 +263,26 @@
             </div>
             <div class="col-lg-9 m-auto tempaltemo-carousel">
                 <div class="row d-flex flex-row">
-                    <!--Controls-->
+                    Controls
                     <div class="col-1 align-self-center">
                         <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
                             <i class="text-light fas fa-chevron-left"></i>
                         </a>
                     </div>
-                    <!--End Controls-->
+                    End Controls
 
-                    <!--Carousel Wrapper-->
+                    Carousel Wrapper
                     <div class="col">
                         <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand" data-bs-ride="carousel">
-                            <!--Slides-->
+                            Start Slides
                             <div class="carousel-inner product-links-wap" role="listbox">
 
-                                <!--First slide-->
+                                First slide
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img" src="{% static 'Mycart/assets/img/brand_01.png' %}" alt="Brand Logo"></a>
-                                            <!-- {% static 'Mycart/assets/img/under-heading.png' %} -->
+                                            {% static 'Mycart/assets/img/under-heading.png' %}
                                         </div>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img" src="{% static 'Mycart/assets/img/brand_02.png' %}" alt="Brand Logo"></a>
@@ -474,9 +295,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--End First slide-->
+                                End First slide
 
-                                <!--Second slide-->
+                                Second slide
                                 <div class="carousel-item">
                                     <div class="row">
                                         <div class="col-3 p-md-5">
@@ -492,11 +313,11 @@
                                             <a href="#"><img class="img-fluid brand-img" src="{% static 'Mycart/assets/img/brand_04.png' %}" alt="Brand Logo"></a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!--End Second slide-->
 
                                 <!--Third slide-->
-                                <div class="carousel-item">
+                                <!-- <div class="carousel-item">
                                     <div class="row">
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
@@ -511,27 +332,27 @@
                                             <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
                                         </div>
                                     </div>
-                                </div>
-                                <!--End Third slide-->
+                                </div> 
+                                End Third slide
 
                             </div>
-                            <!--End Slides-->
+                            End Slides
                         </div>
                     </div>
-                    <!--End Carousel Wrapper-->
+                    End Carousel Wrapper
 
-                    <!--Controls-->
+                    Controls
                     <div class="col-1 align-self-center">
                         <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
                             <i class="text-light fas fa-chevron-right"></i>
                         </a>
                     </div>
-                    <!--End Controls-->
+                    End Controls
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--End Brands-->
 <script src="{% static 'Mycart/assets/js/main.js' %}"></script>
 <script src="{% static 'Mycart/assets/js/plugins.js' %}"></script>
@@ -540,5 +361,5 @@
 {%endblock%}
 
 {% block js %} 
-
+<script src="{% static 'Mycart/assets/js/cartupdate.js' %}"></script>
 {% endblock %}
